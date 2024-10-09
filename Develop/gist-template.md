@@ -1,49 +1,40 @@
-# Title (replace with your title)
+# Understanding Regex: Matching a URL
 
-Introductory paragraph (replace this with your text)
+##  Introduction
+In this tutorial, we'll break down a regular expression (regex) used to match URLs. Regular expressions allow developers to define specific search patterns to match, search, validate strings. This regex is particularly useful for ensuring a vaild URL structure.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The regular expression  `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/` is used to match a valid URL, with or without protocols like `http` or `https`. The regex ensures that the input follows a standard URL format, including an optional protocol, domain name, top-level domain, and optional path.
+
 
 ## Table of Contents
 
 - [Anchors](#anchors)
-- [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
-- [Character Classes](#character-classes)
-- [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing)
-- [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
-
-## Regex Components
-
 ### Anchors
+- [Protocol](#protocol) 
+### Protocol
 
-### Quantifiers
+- [Domain Name](#domain-name)
+### Domain Name
 
-### OR Operator
+- [Top-Level Domain](#top-level-domain)
+### Top-Level Domain (TLD)
 
-### Character Classes
+- [Path](#path)
+### Path
 
-### Flags
+([\/\w \.-]*)*\/?:
+- `\/`: Matches the forward slash.
+- `\w`: Matches any word character (letters, digits, or underscores).
+- `\.`: Matches the dot.
+- `*`: Allows the path to be optional or repeated.
+- `\/?`: Allows for an optional trailing forward slash.
 
-### Grouping and Capturing
 
-### Bracket Expressions
-
-### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
+## Conclusion
+This regular expression provides a comprehensive way to validate URLs. By allowing optional protocols, domains with multiple subdomains or hyphens, and flexible paths, it can handle most common URL formats used on the web today.
 
 ## Author
+This tutorial was written by [Yeheyis](https://github.com/yeheyis1), a web development student passionate about learning regex and web technologies.
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
